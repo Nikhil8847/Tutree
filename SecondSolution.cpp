@@ -17,12 +17,12 @@ void FindSubStrings(string bigger, string smaller){
 
     for(int i = 0; i<= bigger.size()-smaller.size(); i++)
     {
-        string temp = bigger.substr(i,smaller.size());
+        string temp = bigger.substr(i,smaller.size());  // Sliding windows and taking next substring of size equal to smaller string.
         
         sort(temp.begin(), temp.end());
 
         if(temp == temp2){
-            cout << "String " << temp << " found at : " << i << " index" << endl;
+            cout << "String " << bigger.substr(i,smaller.size()) << " found at : " << i << " index" << endl;
         }
     }
 }
